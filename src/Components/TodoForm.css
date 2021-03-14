@@ -5,7 +5,7 @@ form {
   flex-direction: column;
 }
 
-input[type="text"] {
+input[name="task"] {
   margin-top: 20px;
   padding: 15px 30px;
   font-size: 1.3rem;
@@ -17,11 +17,11 @@ input[type="text"] {
   inset -5px -5px 5px #32374e;
 }
 
-input[type="text"]::placeholder {
+input[name="task"]::placeholder {
   color: rgba(167, 183, 255, .4);
 }
 
-input[type="text"]:focus {
+input[name="task"]:focus {
   outline: 0;
 }
 

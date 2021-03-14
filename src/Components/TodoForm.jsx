@@ -12,7 +12,7 @@ export default function TodoForm() {
 
   const notifyOptions = {
     position: "bottom-right",
-    autoClose: 2000,
+    autoClose: 3000,
     hideProgressBar: false,
     closeOnClick: false,
     pauseOnHover: true,
@@ -40,7 +40,9 @@ export default function TodoForm() {
   };
 
   const deleteTask = id => {
-    setTasks(tasks.filter(task => task.id !== id));
+    const newTasks = tasks.filter(task => task.id !== id);
+    setTasks(newTasks);
+    localStorage.setItem('tasks', JSON.stringify(newTasks));
     notifyError('Tâche supprimée !');
   }
 
@@ -65,14 +67,14 @@ export default function TodoForm() {
         />
         <button type="submit" className="btn">Ajouter</button>
       </form>
-      <h1>Mes tâches</h1>
+      <h1>{tasks.length > 0 ? 'Mes tâches' : 'Aucune tâche pour le moment.'}</h1>
       <ul>
         {tasks.map(task => <Task key={task.id} task={task.name} delete={() => deleteTask(task.id)}/>)}
       </ul>
       <ToastContainer
         position="bottom-right"
         transition={Slide}
-        autoClose={2000}
+        autoClose={3000}
         closeOnClick={false}
         pauseOnFocusLoss={false}
       />

@@ -15,4 +15,9 @@ li {
 span {
   float: right;
   cursor: pointer;
+  transition: color 300ms ease-in-out;
+}
+
+span:hover {
+  color: #fff;
 }
