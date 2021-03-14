@@ -1,11 +1,11 @@
 import React from 'react';
-import TodoForm from "./Components/TodoForm";
+import TaskForm from "./Components/TodoList/TaskForm";
 import './App.css';
 
 export default function App() {
   return (
     <div className="container">
-      <TodoForm/>
+      <TaskForm/>
     </div>
   )
 }

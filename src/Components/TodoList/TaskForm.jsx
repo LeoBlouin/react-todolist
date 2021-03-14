@@ -2,10 +2,10 @@ import React, {useState, useEffect} from 'react';
 import {v4 as uuidv4} from 'uuid';
 import {ToastContainer, toast, Slide} from "react-toastify";
 import 'react-toastify/dist/ReactToastify.min.css';
-import './TodoForm.css';
+import './TaskForm.css';
 import Task from "./Task";
 
-export default function TodoForm() {
+export default function TaskForm() {
 
   const [tasks, setTasks] = useState([]);
   const [task, setTask] = useState('');
